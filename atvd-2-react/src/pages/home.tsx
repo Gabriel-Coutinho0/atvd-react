@@ -4,6 +4,8 @@ import loteria from '../services/loteria';
 import Mega from './mega';
 import Loto from './loto';
 import "../components/pagesCss/home.css"
+import Quina from './quina';
+import Rotas from '../routes';
 
 
 const Home = () => {
@@ -39,10 +41,9 @@ const Home = () => {
                 </div>
             ) : (
                 <div className="form">
-                    {resultado.megasena.numeroDoConcurso ? (
+                    {resultado.megasena.dataApuracao ? (
                         <>
-                            <Mega></Mega>
-                            <Loto></Loto>
+                            <Rotas/>
                         </>
                     ) : (
                         <div>Erro ao carregar resultado da loteria</div>

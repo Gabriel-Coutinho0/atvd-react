@@ -6,6 +6,7 @@ export interface ResultadoContext {
 export interface LoteriaProps {
     megasena: Props
     lotofacil: Props
+    quina: Props
 
 }
 export interface Props {

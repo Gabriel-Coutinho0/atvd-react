@@ -5,7 +5,6 @@ const Contexto = createContext({} as ResultadoContext);
 
 
 function Provider({ children }: any) {
-  const [loaded,setLoaded] = useState(false)
   const [resultado, setResultado] = useState({
     megasena: {
       acumulado: false,
@@ -29,7 +28,20 @@ function Provider({ children }: any) {
       quantidadeGanhadores: 0,
       tipoJogo: "",
       valorEstimadoProximoConcurso: 0,
-      valorPremio: 0,}
+      valorPremio: 0,}, quina:{
+        acumulado: false,
+      concursoEspecial: false,
+      dataApuracao: "",
+      dataPorExtenso: "",
+      dataProximoConcurso: "",
+      dezenas: [],
+      numeroDoConcurso: 0,
+      quantidadeGanhadores: 0,
+      tipoJogo: "",
+      valorEstimadoProximoConcurso: 0,
+      valorPremio: 0,
+      }
+
   } as LoteriaProps
   );
 

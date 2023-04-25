@@ -1,0 +1,33 @@
+.menu{
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 12px;
+    font-size: large;
+}
+.lotoFacil{
+    text-decoration: none;
+    color: #930089;
+    padding: 12px;
+}
+.megaSena{
+    text-decoration: none;
+    color: #209869;
+    padding: 12px;
+}
+.quina{
+    text-decoration: none;
+    color: #260085;
+    padding: 12px;
+}
+
+.link{
+    font-size: 25x;
+    font-weight: bold;
+    text-align: center;
+}
+.link:hover{
+    color: gray;
+}
+.link:focus-within{
+    color: #aaa;
+}
