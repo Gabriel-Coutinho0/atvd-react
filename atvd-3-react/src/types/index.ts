@@ -7,9 +7,11 @@ export interface LoteriaProps {
     megasena: Props
     lotofacil: Props
     quina: Props
+    timemania: Props
 
 }
 export interface Props {
+    timeDoCoracao: string
     acumulado: boolean,
     concursoEspecial: boolean,
     dataApuracao: string,
@@ -23,3 +25,5 @@ export interface Props {
     valorPremio: number,
 
 }
+    
+  

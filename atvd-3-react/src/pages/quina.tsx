@@ -5,7 +5,7 @@ import Vencedores from "../components/vencedores/vencedores";
 import "../components/pagesCss/page.css"
 import { useContexto } from "../hooks";
 import { Linha } from '../styles/sytle';
-import CabecalhoQuina from "../components/cabecalho/cabecalhoQuina";
+import CabecalhoQuina from "../components/nomeLoteria/cabecalhoQuina";
 import ValorAcumuladoQuina from "../components/valorAcumulado/valorAcumuladoQuina";
 import NmrSorteadoQuina from "../components/nmrsSorteado/nmrSorteadoQuina";
 

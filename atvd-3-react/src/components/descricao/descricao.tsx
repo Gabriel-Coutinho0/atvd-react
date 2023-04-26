@@ -1,10 +1,11 @@
-import "./descricao.css"
+import { DivDescricao } from "../../styles/sytle";
+
 
 const Descricao = ({dado}:any) => {
     return (
-        <div className='descricao-mega'>
+        <DivDescricao >
             Estimativa do prêmio do proximo concurso. Sorteio {dado}:
-        </div>
+        </DivDescricao>
     );
 }
 

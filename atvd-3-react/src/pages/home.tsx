@@ -2,7 +2,7 @@ import { useContexto } from '../hooks';
 import { useEffect, useState } from 'react';
 import loteria from '../services/loteria';
 import Mega from './mega';
-import Loto from './loto';
+import Loto from './timeMania';
 import "../components/pagesCss/home.css"
 import Quina from './quina';
 import Rotas from '../routes';

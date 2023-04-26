@@ -7,6 +7,7 @@ const Contexto = createContext({} as ResultadoContext);
 function Provider({ children }: any) {
   const [resultado, setResultado] = useState({
     megasena: {
+      timeDoCoracao:"",
       acumulado: false,
       concursoEspecial: false,
       dataApuracao: "",
@@ -18,7 +19,9 @@ function Provider({ children }: any) {
       tipoJogo: "",
       valorEstimadoProximoConcurso: 0,
       valorPremio: 0,
-    }, lotofacil: {acumulado: false,
+    }, lotofacil: {
+      timeDoCoracao:"",
+      acumulado: false,
       concursoEspecial: false,
       dataApuracao: "",
       dataPorExtenso: "",
@@ -29,6 +32,20 @@ function Provider({ children }: any) {
       tipoJogo: "",
       valorEstimadoProximoConcurso: 0,
       valorPremio: 0,}, quina:{
+        timeDoCoracao:"",
+        acumulado: false,
+      concursoEspecial: false,
+      dataApuracao: "",
+      dataPorExtenso: "",
+      dataProximoConcurso: "",
+      dezenas: [],
+      numeroDoConcurso: 0,
+      quantidadeGanhadores: 0,
+      tipoJogo: "",
+      valorEstimadoProximoConcurso: 0,
+      valorPremio: 0,
+      }, timemania: {
+        timeDoCoracao:"",
         acumulado: false,
       concursoEspecial: false,
       dataApuracao: "",

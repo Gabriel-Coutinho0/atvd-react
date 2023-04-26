@@ -1,5 +1,5 @@
 import trevoMega from '../assets/trevo-megasena.png'
-import CabecalhoMega from '../components/cabecalho/cabecalhoMega';
+import CabecalhoMega from '../components/nomeLoteria/cabecalhoMega';
 import Concurso from '../components/concurso/concurso';
 import Descricao from '../components/descricao/descricao';
 import NmrSorteadoMega from '../components/nmrsSorteado/nmrSorteadoMega';

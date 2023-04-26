@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Mega from "../pages/mega";
-import Loto from "../pages/loto";
+import Time from "../pages/timeMania";
 import Quina from "../pages/quina";
 import Menu from "../components/menu/menu";
 
@@ -24,7 +24,7 @@ const Rotas = () => {
                 <Routes>
                     <Route path="/" element={<Mega />} />
                     <Route path="/megasena" element={<Mega />} />
-                    <Route path="/lotofacil" element={<Loto />} />
+                    <Route path="/timemania" element={<Time />} />
                     <Route path="/quina" element={<Quina />} />
                     <Route path="*" element={<Erro />} />
 
