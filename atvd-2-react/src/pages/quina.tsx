@@ -26,12 +26,12 @@ const Quina = () => {
 
         <>
          <div className='container'>
-            <div className='coluna-2'>
+            <div className='coluna'>
                 <CabecalhoQuina img={TrevoQuina} titulo={"QUINA"} ></CabecalhoQuina>
                 <Descricao dado={resultado.quina.dataProximoConcurso} />
                 <ValorAcumuladoQuina dado={resultado.quina.valorEstimadoProximoConcurso.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} />
             </div>
-            <div className='coluna-3'>
+            <div className='coluna'>
                 <NmrSorteadoQuina dado={resultado.quina.dezenas} />
                 <Vencedores dado={resultado.quina.acumulado} dado2={resultado.quina.quantidadeGanhadores} info={verficarGanhadores()}/>
                 <Concurso dado={`${resultado.quina.numeroDoConcurso} - ${resultado.quina.dataPorExtenso} `} />
