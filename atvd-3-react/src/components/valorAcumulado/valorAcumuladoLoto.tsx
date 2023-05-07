@@ -1,10 +1,15 @@
-import { DivValorAcumuladoTime, H2 } from '../../styles/sytle';
+import styled from 'styled-components';
 import './valorAcumulado.css'
-const ValorAcumuladoTimemania = ({dado}:any) => {
+import { timemaniaSld } from '../../styles/theme';
+const ValorAcumuladoTimemania = ({ dado }: any) => {
     return (
-        <DivValorAcumuladoTime>
-            <H2>{dado}</H2>
-        </DivValorAcumuladoTime>);
+        <DivValor className='quina-valor'>
+            <h2>{dado}</h2>
+        </DivValor>
+    );
 }
-
+const DivValor = styled.div`
+color:${timemaniaSld.estimativa};
+padding: 0em 2em 2em 3em;
+`
 export default ValorAcumuladoTimemania;

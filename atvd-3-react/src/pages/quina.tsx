@@ -8,12 +8,14 @@ import { Linha } from '../styles/sytle';
 import CabecalhoQuina from "../components/nomeLoteria/cabecalhoQuina";
 import ValorAcumuladoQuina from "../components/valorAcumulado/valorAcumuladoQuina";
 import NmrSorteadoQuina from "../components/nmrsSorteado/nmrSorteadoQuina";
+import { quinaSld } from "../styles/theme";
+import styled from "styled-components";
 
 
 
 const Quina = () => {
     const { resultado } = useContexto();
-    
+
     function verficarGanhadores() {
         if (resultado.quina.quantidadeGanhadores === 1) {
             return " GANHADOR"
@@ -25,18 +27,18 @@ const Quina = () => {
     return (
 
         <>
-         <div className='container'>
-            <div className='coluna-2'>
-                <CabecalhoQuina img={TrevoQuina} titulo={"QUINA"} ></CabecalhoQuina>
-                <Descricao dado={resultado.quina.dataProximoConcurso} />
-                <ValorAcumuladoQuina dado={resultado.quina.valorEstimadoProximoConcurso.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} />
-            </div>
-            <div className='coluna-3'>
-                <NmrSorteadoQuina dado={resultado.quina.dezenas} />
-                <Vencedores dado={resultado.quina.acumulado} dado2={resultado.quina.quantidadeGanhadores} info={verficarGanhadores()}/>
-                <Concurso dado={`${resultado.quina.numeroDoConcurso} - ${resultado.quina.dataPorExtenso} `} />
+            <div className='container'>
+                <DivEsquerdo>
+                    <CabecalhoQuina img={TrevoQuina} titulo={"QUINA"} ></CabecalhoQuina>
+                    <Descricao dado={resultado.quina.dataProximoConcurso} />
+                    <ValorAcumuladoQuina dado={resultado.quina.valorEstimadoProximoConcurso.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })} />
+                </DivEsquerdo>
+                <DivDireito>
+                    <NmrSorteadoQuina dado={resultado.quina.dezenas} color={quinaSld.bolafonte} background={quinaSld.bola} />
+                    <Vencedores dado={resultado.quina.acumulado} dado2={resultado.quina.quantidadeGanhadores} info={verficarGanhadores()} />
+                    <Concurso dado={`${resultado.quina.numeroDoConcurso} - ${resultado.quina.dataPorExtenso} `} />
 
-            </div>
+                </DivDireito>
             </div>
             <Linha />
 
@@ -44,5 +46,10 @@ const Quina = () => {
 
     );
 }
-
+const DivEsquerdo = styled.div`
+width: 50%;
+`
+const DivDireito = styled.div`
+width: 50%;
+`
 export default Quina;

@@ -9,4 +9,5 @@ const Descricao = ({dado}:any) => {
     );
 }
 
+
 export default Descricao;

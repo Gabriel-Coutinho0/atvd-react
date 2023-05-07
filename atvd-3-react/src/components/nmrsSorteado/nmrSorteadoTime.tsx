@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import './nmrSorteado.css'
 
-const NmrSorteadoMega = ({dado,color, background}:any) => {
+const NmrSorteadoTime = ({dado,color, background}:any) => {
     return (
         <div className="coluna-dezenas-mega">
             <ul>{dado ? dado.map((elementos:any) =>
@@ -32,4 +32,4 @@ font-weight: bold;
 color: ${(props) => props.color};
 background-color: ${(props) => props.background};
 `
-export default NmrSorteadoMega;
+export default NmrSorteadoTime;
