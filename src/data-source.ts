@@ -1,13 +1,15 @@
 import { DataSource } from "typeorm";
+import "dotenv/config" 
 
 //https://orkhan.gitbook.io/typeorm/docs/data-source-options
+
+
 const AppDataSource = new DataSource({
-    database: 'bdaula.db', // se for SQLite, então use bdaula.db
-    type: "sqlite", // se for SQLite, então use sqlite
-    // host: 'localhost', // não use esta propriedade se for sqlite
-    // port: 5432, // não use esta propriedade se for sqlite
-    // username: 'postgres', // não use esta propriedade se for sqlite
-    // password:'123', // não use esta propriedade se for sqlite
+    type: "postgres",
+    host: process.env.TYPEORM_HOST, 
+    port: 5432, 
+    username: process.env.TYPEORM_USERNAME, 
+    password:process.env.TYPEORM_PASSWORD, 
     // true indica que o schema do BD será criado a cada vez que a aplicação inicializar
     // deixe false ao usar migrations
     synchronize: false, 
@@ -15,7 +17,8 @@ const AppDataSource = new DataSource({
     entities: ["src/entities/*.ts"], // entidades que serão convertidas em tabelas
     migrations: ["src/migrations/*.ts"], // local onde estarão os arquivos de migração
     subscribers: [],
-    maxQueryExecutionTime: 2000 // 2 seg.
+    maxQueryExecutionTime: 2000, // 2 seg.
+    database: process.env.TYPEORM_SCHEMA
 });
 
 // https://orkhan.gitbook.io/typeorm/docs/data-source
